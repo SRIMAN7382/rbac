@@ -1,0 +1,199 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* ========== GLOBAL STYLES ========== */
+body {
+  @apply bg-gray-50 text-gray-800 font-sans antialiased;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Utility classes for smooth scrolling */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+p {
+  @apply mb-4 text-gray-700;
+}
+
+a {
+  @apply text-blue-600 hover:text-blue-700 transition-colors;
+  text-decoration: none;
+}
+
+/* ========== HEADER STYLES ========== */
+.header {
+  @apply bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500 shadow-lg text-white;
+}
+
+.header h1 {
+  @apply text-4xl font-extrabold tracking-tight text-center py-4;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== BUTTON STYLES ========== */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium tracking-wide transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-400;
+}
+
+.btn-success {
+  @apply bg-green-500 text-white hover:bg-green-600 focus:ring-green-400;
+}
+
+.btn-warning {
+  @apply bg-yellow-500 text-white hover:bg-yellow-600 focus:ring-yellow-400;
+}
+
+.btn-danger {
+  @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-400;
+}
+
+.btn-disabled {
+  @apply bg-gray-300 text-gray-400 cursor-not-allowed;
+}
+
+/* Floating Action Button */
+.fab {
+  @apply fixed bottom-6 right-6 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 flex items-center justify-center w-12 h-12;
+}
+
+/* ========== FORM STYLES ========== */
+.form-input {
+  @apply block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+}
+
+.form-textarea {
+  @apply block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm resize-none;
+}
+
+.form-select {
+  @apply block w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25em;
+  padding-right: 2.5rem;
+}
+
+.form-label {
+  @apply mb-2 block text-sm font-medium text-gray-700;
+}
+
+.form-error {
+  @apply text-sm text-red-600 mt-1;
+}
+
+.form-success {
+  @apply text-sm text-green-600 mt-1;
+}
+
+/* Checkboxes and Radio Buttons */
+.custom-checkbox, .custom-radio {
+  @apply relative inline-flex items-center cursor-pointer select-none;
+}
+
+.custom-checkbox input, .custom-radio input {
+  @apply sr-only;
+}
+
+.custom-checkbox .checkmark, .custom-radio .radiomark {
+  @apply w-5 h-5 bg-white border border-gray-300 rounded-md transition duration-300 ease-in-out flex items-center justify-center;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  @apply bg-blue-600 border-blue-600;
+}
+
+.custom-radio input:checked ~ .radiomark {
+  @apply bg-blue-600 border-blue-600;
+}
+
+.custom-checkbox .checkmark:after, .custom-radio .radiomark:after {
+  content: "";
+  @apply hidden w-2 h-4 border-b-2 border-r-2 border-white transform rotate-45;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  @apply block;
+}
+
+/* ========== TABLE STYLES ========== */
+.table {
+  @apply w-full bg-white border border-gray-300 rounded-lg overflow-hidden shadow-sm;
+}
+
+.table th {
+  @apply bg-gray-100 text-left font-semibold text-sm text-gray-600 uppercase px-4 py-3 border-b;
+}
+
+.table td {
+  @apply px-4 py-3 border-b text-sm text-gray-700;
+}
+
+.table tr:nth-child(even) {
+  @apply bg-gray-50;
+}
+
+.table tr:hover {
+  @apply bg-gray-100;
+}
+
+/* ========== MODAL STYLES ========== */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl max-w-lg w-full px-8 py-6 transform transition-all scale-95 opacity-0;
+  animation: modalShow 0.3s ease-in-out forwards;
+}
+
+@keyframes modalShow {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+  .btn {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .table th, .table td {
+    @apply px-2 py-2 text-xs;
+  }
+
+  .modal-content {
+    @apply max-w-sm px-4 py-4;
+  }
+}
+
+/* ========== ACCESSIBILITY ========== */
+.sr-only {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+}
