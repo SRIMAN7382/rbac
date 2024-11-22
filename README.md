@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# RBAC UI - Role-Based Access Control User Interface
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project implements a Role-Based Access Control (RBAC) User Interface using React. It provides a simple yet powerful way to manage users, roles, and permissions in a system that requires fine-grained access control.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User Management
+  - View list of users
+  - Add new users
+  - Edit existing users
+  - Delete users
+  - Assign roles to users
+  - Manage user status (active/inactive)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Role Management
+  - View list of roles
+  - Add new roles
+  - Edit existing roles
+  - Delete roles
+  - Assign permissions to roles
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Dynamic Permissions
+  - Roles have a set of permissions (read, write, delete)
+  - Permissions can be easily modified for each role
 
-### `npm test`
+- Responsive Design
+  - UI is designed to work on various screen sizes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Accessibility
+  - Implements basic accessibility features for better usability
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- Tailwind CSS
+- React Hooks for state management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   \`\`\`
+   git clone https://github.com/your-username/rbac-ui.git
+   cd rbac-ui
+   \`\`\`
 
-### `npm run eject`
+2. Install dependencies:
+   \`\`\`
+   npm install
+   \`\`\`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server:
+   \`\`\`
+   npm start
+   \`\`\`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open your browser and navigate to \`http://localhost:3000\`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### User Management
 
-## Learn More
+1. Navigate to the "Users" tab
+2. To add a new user, fill out the form at the top of the page and click "Add User"
+3. To edit a user, click the "Edit" button next to the user's entry in the table
+4. To delete a user, click the "Delete" button next to the user's entry
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Role Management
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Navigate to the "Roles" tab
+2. To add a new role, fill out the form at the top of the page and click "Add Role"
+3. To edit a role, click the "Edit" button next to the role's entry in the table
+4. To delete a role, click the "Delete" button next to the role's entry
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- \`src/\`
+  - \`components/\`
+    - \`Header.jsx\`: Navigation header component
+    - \`UserManagement.jsx\`: User management component
+    - \`RoleManagement.jsx\`: Role management component
+  - \`App.jsx\`: Main application component
+  - \`index.js\`: Entry point of the application
+- \`styles/\`
+  - \`globals.css\`: Global styles and Tailwind CSS imports
 
-### Analyzing the Bundle Size
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Implement proper error handling and validation
+2. Add confirmation dialogs for delete actions
+3. Implement pagination for user and role lists
+4. Add search and filter functionality
+5. Implement more granular permissions
+6. Add user authentication and authorization
+7. Integrate with a backend API for persistent data storage
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the MIT License.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
